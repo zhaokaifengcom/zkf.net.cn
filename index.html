@@ -1,3 +1,34 @@
-zkf.net.cn
-<br/>
-zhaokaifeng.com
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>    
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>荒原之梦网主站点跳转</title>
+</head>
+<body>
+
+    <div style="width:100%;margin:25px auto; background:#ffffff; height:513px;">
+          <div style="width:100%;height:0px;position:relative; text-align:center;padding-top:80px;">
+               <span style="position: absolute;  font: 25px/25px '微软雅黑';  color: #999999;  bottom: 25px;  right: 476px;">请访问荒原之梦网主站点，将在<i style="color:#ff6600;font-weight:bold;padding:0 2px;" id="jumpTo">10</i> 秒后，自动转入 <a href="https://zhaokaifeng.com/" style="color:#2ca9e0;">zhaokaifeng.com</a></span>
+          </div>
+    </div>
+
+
+    <script type="text/javascript">     
+        function countDown(secs,surl){     
+         var jumpTo = document.getElementById('jumpTo');
+         jumpTo.innerHTML=secs;  
+         if(--secs>0){     
+             setTimeout("countDown("+secs+",'"+surl+"')",1000);     
+             }     
+         else{       
+             location.href=surl;     
+             }     
+         }     
+    </script> 
+    <script type="text/javascript">
+        window.onload=function(){
+           countDown(10,'https://zhaokaifeng.com/')
+        }
+    </script>
+</body>
+</html>
